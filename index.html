@@ -1,14 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Colorful Calculator</title>
-
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css" type="text/css">
 </head>
+
 <body>
-    
+    <section id="calculator">
+        <form name="calculator" class="calc">
+            <input type="text" name="Text Value" class="txt" readonly>
+            <span class="number clear-sign" onclick="document.getElementsByClassName('txt')[0].value = '' ">c</span>
+            <span class="number" onclick="document.getElementsByClassName('txt')[0].value += '/'">/</span>
+            <span class="number" onclick="insert('*')">*</span>
+            <span class="number" onclick="insert('7')">7</span>
+            <span class="number" onclick="insert('8')">8</span>
+            <span class="number" onclick="insert('9')">9</span>
+            <span class="number plus-sign" onclick="insert('+')">+</span>
+            <span class="number" onclick="insert('4')">4</span>
+            <span class="number" onclick="insert('5')">5</span>
+            <span class="number" onclick="insert('6')">6</span>
+            <span class="number" onclick="insert('3')">3</span>
+            <span class="number" onclick="insert('2')">2</span>
+            <span class="number" onclick="insert('1')">1</span>
+            <span class="number" onclick="insert('-')">-</span>
+            <span class="number" onclick="insert('0')">0</span>
+            <span class="number" onclick="insert('.')">.</span>
+            <span class="number equal-sign"
+                onclick="document.getElementsByClassName('txt')[0].value = eval(document.getElementsByClassName('txt')[0].value)">=</span>
+        </form>
+    </section>
     <script src="app.js"></script>
 </body>
+
 </html>
